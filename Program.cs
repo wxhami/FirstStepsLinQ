@@ -9,3 +9,18 @@ Console.Write(newList);
 
 //ex 2
 
+var path = @"C:\Users\vladu\Downloads\test.txt";
+
+var lines = File.ReadAllLines(path);
+
+var resultLines = lines.Where(line => line.Contains("понимаешь"));
+foreach (var line in resultLines)
+{
+    Console.WriteLine(line);
+}
+
+
+var resultWord = lines.FirstOrDefault(word => word.Contains("мир"));
+Console.Write(resultWord);
+Console.ReadLine();
+
